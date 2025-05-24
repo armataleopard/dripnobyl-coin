@@ -10,6 +10,21 @@ A post-apocalyptic themed cryptocurrency token website inspired by Chernobyl.
 - Automatic GitHub sync
 - Solana contract integration
 
+## Installation 🔧
+
+```bash
+# Clone the repository
+git clone https://github.com/armataleopard/dripnobyl-coin.git
+
+# Install dependencies
+npm install
+
+# Start monitoring services
+./start-monitor.sh
+
+# Open index.html in your browser
+```
+
 ## Tech Stack 🛠️
 
 - HTML5 & Tailwind CSS
