@@ -1,0 +1,7 @@
+{
+    "wallet_address": "YOUR_SOLANA_WALLET_ADDRESS",
+    "rpc_endpoint": "https://your-rpc-node.com",
+    "check_interval": 1,
+    "auto_stop": true,
+    "debug_mode": true
+} 

@@ -1,0 +1,57 @@
+Create a modern, animated HTML website for a memecoin called ElmoFi ($ELMOFI), inspired by the structure of  @dogogogo.html 
+
+⚠️ DO NOT copy the text or design. Just use similar structure, layout, and UX flow.
+🧱 Structure:
+1. **Header Bar (Fixed):**
+   - Logo on the left (logo.png)
+   - Navigation links on the right:
+     - “Why ElmoFi?”
+     - “Roadmap”
+     - “The Legend”
+     - “Buy $ELMOFI”
+2. **Hero Section:**
+   - Fullscreen banner background (banner.png)
+   - Big centered logo and heading: “Welcome to ElmoFi”
+   - Animated subtitle: “Glitch-born. Meme-powered.”
+   - Large CTA button: “BUY ON PUMPFUN” (https://pump.fun)
+3. **What is ElmoFi Section:**
+   - Side-by-side layout
+   - Left: image (1.png)
+   - Right: heading + paragraph describing ElmoFi as a digital entity born from corrupted AI and chaos algorithms
+4. **Step-by-step Onboarding (Like Doge wallet cards):**
+   - 3 columns:
+     - “Step 1: Open your third eye”
+     - “Step 2: Touch lava”
+     - “Step 3: Click ‘BUY’ and don’t ask questions”
+   - Add hover animations (bounce, glow, tilt)
+5. **Gallery Grid (Use 2.png–5.png):**
+   - Show each image in a card
+   - Under each image — a meme-caption like:
+     - 2.png: “This is Elmo’s real face after he saw your sell order.”
+     - 3.png: “ElmoFi isn’t safe. That’s why it pumps.”
+     - 4.png: “We tried to contain him. We failed.”
+     - 5.png: “You’re either with the lava, or under it.”
+6. **Roadmap:**
+   - Vertical or horizontal timeline
+   - Stylized like Dogecoin’s Trailmap
+   - Example milestones:
+     - Q1: Launch on pump.fun
+     - Q2: Elmo becomes self-aware
+     - Q3: Chaos. Fire. Pump.
+     - Q4: Merch? Maybe.
+7. **Legend Button:**
+   - When clicked, opens a dark overlay or section with animated paragraphs describing how ElmoFi was born from a corrupted TikTok filter and now lives inside pump.fun
+8. **Animated background:**
+   - Use fon.png as repeating background or blur-layer
+   - Add floating red blobs or flames using CSS
+9. **Footer:**
+   - Logo again
+   - Short text like: “ElmoFi is not responsible for your financial decisions. But it is watching.”
+   - Small social links placeholders (Twitter, Pump)
+🎨 Style:
+- Use font-family: ‘Comic Neue’, ‘Bebas Neue’
+- Colors: red, black, bright green, cream background areas
+- AOS or keyframe animations: fade, scale, wobble, bounce
+- Responsive, but optimized for desktop wow-effect
+Make it fun, unpredictable, readable. All text must be editable.
+Use clean HTML/CSS/JS — no Bootstrap.
