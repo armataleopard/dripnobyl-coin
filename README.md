@@ -1,58 +1,35 @@
-# ElmoFi - Система управления токен-сайтами
+# Dripnobyl Coin 🌟
 
-## Структура проекта
+A post-apocalyptic themed cryptocurrency token website inspired by Chernobyl.
 
-```
-elmofi/
-├── config/           # Общие конфигурационные файлы
-│   └── config.json  # Основной конфиг (RPC, API ключи)
-├── monitoring/       # Сервисы мониторинга
-│   └── logs/        # Логи мониторинга
-├── scripts/         # Скрипты автоматизации
-├── sites/           # Директория для всех сайтов
-│   ├── templates/   # Шаблоны сайтов
-│   │   └── default/ # Базовый шаблон
-│   └── active/      # Активные сайты
-└── tasks/           # Технические задания
-    ├── completed/   # Выполненные ТЗ
-    └── pending/     # Ожидающие выполнения
+## Features ☢️
 
-```
+- Interactive post-apocalyptic design
+- Real-time contract monitoring
+- Animated UI elements with toxic effects
+- Automatic GitHub sync
+- Solana contract integration
 
-## Процесс создания нового сайта
+## Tech Stack 🛠️
 
-1. Разместите ТЗ в директории `tasks/pending/`
-2. Запустите создание сайта:
-   ```bash
-   ./scripts/site-manager.sh create <site-name>
-   ```
-3. После создания сайт появится в `sites/active/<timestamp>-<site-name>/`
-4. ТЗ автоматически переместится в `tasks/completed/`
+- HTML5 & Tailwind CSS
+- JavaScript
+- Python (contract monitoring)
+- Node.js (webhooks and updates)
+- GitHub Actions (auto-sync)
 
-## Шаблоны
+## Gallery 🖼️
 
-- Базовый шаблон находится в `sites/templates/default/`
-- Каждый новый шаблон должен содержать:
-  - assets/ (изображения)
-  - js/ (скрипты)
-  - styles/ (CSS)
-  - index.html
+Featuring contaminated zones and radioactive imagery that creates an immersive post-apocalyptic experience.
 
-## Мониторинг
+## Roadmap 🗺️
 
-- Логи хранятся в `monitoring/logs/`
-- Конфигурация в `config/config.json`
-- Статус мониторинга: `./scripts/site-manager.sh status`
+- Initial Contamination
+- Toxic Expansion
+- Nuclear Winter
 
-## Автоматизация
+## Contact ☎️
 
-Все сайты автоматически:
-- Создаются из шаблона
-- Обновляют адрес контракта
-- Удаляются через 10 минут после создания
+For more information about Dripnobyl Coin, visit our website or follow us on social media.
 
-## Безопасность
-
-- Все API ключи хранятся в `config/config.json`
-- Логи мониторинга не содержат чувствительных данных
-- Каждый сайт изолирован в своей директории # elmofi
+⚠️ Enter the wasteland at your own risk! ⚠️
