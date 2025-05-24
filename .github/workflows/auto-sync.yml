@@ -1,0 +1,33 @@
+name: Auto Sync
+
+on:
+  push:
+    branches: [ main, master ]
+  schedule:
+    - cron: '*/30 * * * *'  # Каждые 30 минут
+  workflow_dispatch:  # Позволяет запускать вручную
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Git
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+      
+      - name: Check for changes
+        run: |
+          git remote update
+          if [ -n "$(git status --porcelain)" ]; then
+            TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+            git add .
+            git commit -m "Auto-sync update: $TIMESTAMP"
+            git push
+          else
+            echo "No changes to sync"
+          fi 

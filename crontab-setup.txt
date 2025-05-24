@@ -1,0 +1,6 @@
+# Добавьте следующую строку в crontab (crontab -e):
+# Синхронизация каждые 5 минут:
+*/5 * * * * cd /Users/stanislav.uy/Desktop/sites/elmofi && ./git-sync.sh >> git-sync.log 2>&1
+
+# Или каждый час:
+# 0 * * * * cd /Users/stanislav.uy/Desktop/sites/elmofi && ./git-sync.sh >> git-sync.log 2>&1 

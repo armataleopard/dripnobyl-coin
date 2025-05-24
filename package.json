@@ -1,0 +1,15 @@
+{
+  "name": "dripnobyl-contract-monitor",
+  "version": "1.0.0",
+  "description": "Dripnobyl Token Contract Monitor",
+  "main": "contract-webhook.js",
+  "scripts": {
+    "start": "bash start-monitor.sh",
+    "webhook": "node contract-webhook.js",
+    "monitor": "python3 watch_contract.py"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.87.6",
+    "express": "^4.18.2"
+  }
+} 

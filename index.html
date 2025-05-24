@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ElmoFi - The Meme Token</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --elmo-red: #FF0000;
+            --elmo-black: #000000;
+            --elmo-green: #00FF00;
+            --elmo-cream: #FFFDD0;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: var(--elmo-cream);
+        }
+
+        .bebas-neue {
+            font-family: 'Bebas Neue', sans-serif;
+        }
+
+        .header {
+            background: rgba(255, 0, 0, 0.9);
+            backdrop-filter: blur(5px);
+        }
+
+        .hero-section {
+            background: url('banner.png') center/cover;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        .hero-overlay {
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        .animated-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(45deg, var(--elmo-cream), #FFE4E1);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .section-card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .legend-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 50;
+            display: none;
+        }
+
+        .legend-content {
+            background: var(--elmo-cream);
+            border-radius: 20px;
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 2rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-item {
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+
+    <!-- Fixed Header -->
+    <header class="header fixed w-full z-50 py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <img src="logo.png" alt="ElmoFi Logo" class="h-12">
+            <nav class="hidden md:flex space-x-6">
+                <a href="#about" class="text-white hover:text-elmo-cream transition">About</a>
+                <a href="#how-to-buy" class="text-white hover:text-elmo-cream transition">How to Buy</a>
+                <a href="#gallery" class="text-white hover:text-elmo-cream transition">Gallery</a>
+                <a href="#roadmap" class="text-white hover:text-elmo-cream transition">Roadmap</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section flex items-center justify-center">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <h1 class="bebas-neue text-7xl text-white mb-6" data-aos="fade-down">Welcome to ElmoFi</h1>
+            <p class="text-2xl text-white mb-8" data-aos="fade-up">The Most Wholesome Meme Token in Crypto</p>
+            <button class="bg-elmo-red text-white px-8 py-3 rounded-full text-xl hover:bg-red-600 transition" data-aos="zoom-in">
+                Buy ElmoFi Now
+            </button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2" data-aos="fade-right">
+                    <img src="1.png" alt="ElmoFi Character" class="rounded-2xl shadow-lg">
+                </div>
+                <div class="md:w-1/2" data-aos="fade-left">
+                    <h2 class="bebas-neue text-5xl mb-6 text-elmo-red">What is ElmoFi?</h2>
+                    <p class="text-xl mb-4">ElmoFi is more than just a meme token - it's a community-driven movement inspired by everyone's favorite furry red monster!</p>
+                    <p class="text-xl">Join us in our mission to bring joy, laughter, and incredible gains to the crypto world.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="bebas-neue text-5xl text-center mb-12 text-elmo-red" data-aos="fade-down">How to Buy ElmoFi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="section-card p-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="bebas-neue text-3xl mb-4">1. Get a Wallet</h3>
+                    <p>Download and set up MetaMask or Trust Wallet to store your ElmoFi tokens.</p>
+                </div>
+                <div class="section-card p-6" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="bebas-neue text-3xl mb-4">2. Buy ETH</h3>
+                    <p>Purchase ETH from your preferred exchange and send it to your wallet.</p>
+                </div>
+                <div class="section-card p-6" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="bebas-neue text-3xl mb-4">3. Swap for ElmoFi</h3>
+                    <p>Visit Uniswap, connect your wallet, and swap ETH for ElmoFi tokens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="bebas-neue text-5xl text-center mb-12 text-elmo-red" data-aos="fade-down">ElmoFi Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="1.png" alt="ElmoFi Art 1" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="2.png" alt="ElmoFi Art 2" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="3.png" alt="ElmoFi Art 3" class="w-full h-full object-cover">
+                </div>
+                <div class="gallery-item" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="4.png" alt="ElmoFi Art 4" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap Section -->
+    <section id="roadmap" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="bebas-neue text-5xl text-center mb-12 text-elmo-red" data-aos="fade-down">Roadmap</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8">
+                    <div class="section-card p-6" data-aos="fade-right">
+                        <h3 class="bebas-neue text-3xl mb-4">Phase 1: Launch</h3>
+                        <ul class="list-disc list-inside">
+                            <li>Token Launch on Uniswap</li>
+                            <li>Community Building</li>
+                            <li>Social Media Presence</li>
+                        </ul>
+                    </div>
+                    <div class="section-card p-6" data-aos="fade-left">
+                        <h3 class="bebas-neue text-3xl mb-4">Phase 2: Growth</h3>
+                        <ul class="list-disc list-inside">
+                            <li>Marketing Campaigns</li>
+                            <li>CEX Listings</li>
+                            <li>Partnership Development</li>
+                        </ul>
+                    </div>
+                    <div class="section-card p-6" data-aos="fade-right">
+                        <h3 class="bebas-neue text-3xl mb-4">Phase 3: Expansion</h3>
+                        <ul class="list-disc list-inside">
+                            <li>NFT Collection Launch</li>
+                            <li>Merchandise Store</li>
+                            <li>Community Events</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contract Section -->
+    <section id="contract" class="py-20">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 radioactive-text">КОНТРАКТ ТОКЕНА</h2>
+            <div class="max-w-4xl mx-auto glass-effect p-8 rounded-xl">
+                <div class="flex flex-col space-y-4">
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-300">Адрес контракта:</span>
+                        <div class="flex items-center">
+                            <span id="contractAddress" class="radioactive-text"></span>
+                            <button onclick="copyToClipboard()" class="ml-2 px-3 py-1 rounded-full bg-blue-900 text-blue-300 hover:bg-blue-800 transition">
+                                Копировать
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-300">Баланс:</span>
+                        <span id="contractBalance" class="radioactive-text">Загрузка...</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-blue-300">Последнее обновление:</span>
+                        <span id="lastUpdate" class="radioactive-text">Загрузка...</span>
+                    </div>
+                    <div class="mt-6">
+                        <h3 class="text-2xl font-bold mb-4 radioactive-text">Последние транзакции</h3>
+                        <div id="recentTransactions" class="space-y-2">
+                            <p class="text-blue-300">Загрузка транзакций...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Legend Button -->
+    <button id="legendBtn" class="fixed bottom-8 right-8 bg-elmo-red text-white px-6 py-3 rounded-full shadow-lg hover:bg-red-600 transition z-40">
+        Read the Legend
+    </button>
+
+    <!-- Legend Overlay -->
+    <div id="legendOverlay" class="legend-overlay">
+        <div class="legend-content">
+            <h3 class="bebas-neue text-3xl mb-4">The Legend of ElmoFi</h3>
+            <p class="mb-4">In the vast realm of cryptocurrency, a new hero emerged. ElmoFi, inspired by the beloved character known for spreading joy and laughter, decided to bring that same spirit to the world of digital assets.</p>
+            <p class="mb-4">With a mission to create a community as warm and welcoming as Elmo himself, ElmoFi set out to revolutionize the meme token space.</p>
+            <button id="closeLegend" class="bg-elmo-red text-white px-4 py-2 rounded-full">Close</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-elmo-red text-white py-8">
+        <div class="container mx-auto px-4">
+            <div class="text-center">
+                <p class="mb-4">© 2024 ElmoFi. All rights reserved.</p>
+                <p class="text-sm">Disclaimer: ElmoFi is a meme token for entertainment purposes. Always do your own research before investing.</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="hover:text-elmo-cream transition">Twitter</a>
+                    <a href="#" class="hover:text-elmo-cream transition">Telegram</a>
+                    <a href="#" class="hover:text-elmo-cream transition">Discord</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Legend functionality
+        const legendBtn = document.getElementById('legendBtn');
+        const legendOverlay = document.getElementById('legendOverlay');
+        const closeLegend = document.getElementById('closeLegend');
+
+        legendBtn.addEventListener('click', () => {
+            legendOverlay.style.display = 'block';
+        });
+
+        closeLegend.addEventListener('click', () => {
+            legendOverlay.style.display = 'none';
+        });
+
+        // Close overlay when clicking outside
+        legendOverlay.addEventListener('click', (e) => {
+            if (e.target === legendOverlay) {
+                legendOverlay.style.display = 'none';
+            }
+        });
+
+        // Функция для копирования адреса контракта
+        function copyToClipboard() {
+            const address = document.getElementById('contractAddress').textContent;
+            navigator.clipboard.writeText(address).then(() => {
+                alert('Адрес контракта скопирован!');
+            });
+        }
+
+        // Функция для обновления информации о контракте
+        async function updateContractDisplay() {
+            try {
+                const response = await fetch('/config.json');
+                const data = await response.json();
+
+                document.getElementById('contractAddress').textContent = data.address;
+                document.getElementById('contractBalance').textContent = `${data.balance.toFixed(4)} SOL`;
+                document.getElementById('lastUpdate').textContent = new Date(data.lastUpdate).toLocaleString();
+
+                const transactionsHtml = data.recentTransactions.map(tx => `
+                    <div class="glass-effect p-3 rounded-lg hover:bg-blue-900 transition">
+                        <div class="flex justify-between items-center">
+                            <span class="text-sm text-blue-300">${new Date(tx.timestamp).toLocaleString()}</span>
+                            <a href="https://solscan.io/tx/${tx.signature}" target="_blank" 
+                               class="text-sm radioactive-text hover:text-blue-400 transition">
+                                Просмотреть
+                            </a>
+                        </div>
+                    </div>
+                `).join('');
+
+                document.getElementById('recentTransactions').innerHTML = transactionsHtml;
+            } catch (error) {
+                console.error('Error updating contract info:', error);
+            }
+        }
+
+        // Обновляем информацию каждые 30 секунд
+        updateContractDisplay();
+        setInterval(updateContractDisplay, 30000);
+    </script>
+</body>
+</html> 

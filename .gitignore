@@ -30,4 +30,12 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
-*.sw? 
+*.sw?
+
+# Additional changes from the code block
+node_modules/
+__pycache__/
+*.pyc
+.env
+.venv/
+*.log 
